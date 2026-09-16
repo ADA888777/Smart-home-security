@@ -1,0 +1,125 @@
+{
+  "overall": {
+    "Rules only": {
+      "precision": 1.0,
+      "recall": 0.9467,
+      "f1": 0.9726,
+      "false_positive_rate": 0.0,
+      "tp": 284,
+      "fp": 0,
+      "tn": 25670,
+      "fn": 16
+    },
+    "Isolation Forest only": {
+      "precision": 0.3211,
+      "recall": 0.2033,
+      "f1": 0.249,
+      "false_positive_rate": 0.005,
+      "tp": 61,
+      "fp": 129,
+      "tn": 25541,
+      "fn": 239
+    },
+    "Hybrid (alert = MEDIUM or above)": {
+      "precision": 1.0,
+      "recall": 0.9467,
+      "f1": 0.9726,
+      "false_positive_rate": 0.0,
+      "tp": 284,
+      "fp": 0,
+      "tn": 25670,
+      "fn": 16
+    }
+  },
+  "per_scenario_detection_rate": {
+    "data_exfiltration": {
+      "Rules only": 1.0,
+      "Isolation Forest only": 0.36,
+      "Hybrid (alert = MEDIUM or above)": 1.0,
+      "windows": 50
+    },
+    "normal": {
+      "Rules only": 0.0,
+      "Isolation Forest only": 0.005,
+      "Hybrid (alert = MEDIUM or above)": 0.0,
+      "windows": 25670
+    },
+    "port_scan": {
+      "Rules only": 1.0,
+      "Isolation Forest only": 0.72,
+      "Hybrid (alert = MEDIUM or above)": 1.0,
+      "windows": 50
+    },
+    "traffic_spike": {
+      "Rules only": 0.68,
+      "Isolation Forest only": 0.0,
+      "Hybrid (alert = MEDIUM or above)": 0.68,
+      "windows": 50
+    },
+    "unknown_device": {
+      "Rules only": 1.0,
+      "Isolation Forest only": 0.0,
+      "Hybrid (alert = MEDIUM or above)": 1.0,
+      "windows": 50
+    },
+    "unusual_destination": {
+      "Rules only": 1.0,
+      "Isolation Forest only": 0.06,
+      "Hybrid (alert = MEDIUM or above)": 1.0,
+      "windows": 50
+    },
+    "unusual_port": {
+      "Rules only": 1.0,
+      "Isolation Forest only": 0.08,
+      "Hybrid (alert = MEDIUM or above)": 1.0,
+      "windows": 50
+    }
+  },
+  "risk_levels": {
+    "CRITICAL": {
+      "data_exfiltration": 50,
+      "normal": 0,
+      "port_scan": 20,
+      "traffic_spike": 0,
+      "unknown_device": 0,
+      "unusual_destination": 0,
+      "unusual_port": 1
+    },
+    "HIGH": {
+      "data_exfiltration": 0,
+      "normal": 0,
+      "port_scan": 30,
+      "traffic_spike": 34,
+      "unknown_device": 0,
+      "unusual_destination": 6,
+      "unusual_port": 2
+    },
+    "LOW": {
+      "data_exfiltration": 0,
+      "normal": 129,
+      "port_scan": 0,
+      "traffic_spike": 0,
+      "unknown_device": 0,
+      "unusual_destination": 0,
+      "unusual_port": 0
+    },
+    "MEDIUM": {
+      "data_exfiltration": 0,
+      "normal": 0,
+      "port_scan": 0,
+      "traffic_spike": 0,
+      "unknown_device": 50,
+      "unusual_destination": 44,
+      "unusual_port": 47
+    },
+    "NORMAL": {
+      "data_exfiltration": 0,
+      "normal": 25541,
+      "port_scan": 0,
+      "traffic_spike": 16,
+      "unknown_device": 0,
+      "unusual_destination": 0,
+      "unusual_port": 0
+    }
+  }
+}
